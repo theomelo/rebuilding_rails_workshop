@@ -1,0 +1,7 @@
+---
+language: ruby
+cache: bundler
+rvm: 2.6.6
+before_install: gem install bundler -v 2.2.26
+script: bundle exec rake
+after_success: codecov --file coverage/lcov.info --disable search
